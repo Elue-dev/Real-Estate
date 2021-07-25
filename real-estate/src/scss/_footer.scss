@@ -1,0 +1,56 @@
+@import '../scss/global';
+@import '../scss/mixins';
+
+.footer{
+    padding: 3rem 5%;
+    color: $dark;
+    h3{
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+    .container{
+        background: $light;
+        text-align: center;
+        border:.1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        border-radius: .5rem;
+        padding: 3rem 5%;
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem; 
+            border-bottom: 1px solid rgb(146, 145, 145);
+            .item{
+                flex: 1 1 15rem;
+                text-align: left;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                h1{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                p{
+                    line-height: 2;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:500px){
+    .footer .container .box .item h1 {
+        font-size: 1.3rem;
+    }
+    .footer .container .box .item p {
+        font-size: 1rem;
+    }
+    .footer h3 {
+        font-size: 0.9rem;
+    }
+    .footer .container .box {
+        gap: 1rem;
+    }
+    
+}

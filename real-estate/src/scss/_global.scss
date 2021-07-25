@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+    @media(max-width:800px){
+    *{
+        overflow-x: hidden;
+    } 
+    }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f6f6f6;
+}
+
+html{
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+$mainColor: #05a357;
+$light: #fff;
+$dark: #333;
+$mainColorLight: rgb(222, 255, 222);
+
+@media (max-width:350px){
+    html{
+        font-size: 75%;
+    }
+}

@@ -1,0 +1,72 @@
+@import '../scss/global';
+@import '../scss/mixins';
+
+.services{
+    margin-top: 9rem;
+    h1{
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        color: $dark;
+        // &::after{
+        //     @include after;
+        // }
+        span{
+            @include button;
+            background: rgb(222, 255, 222);
+        }
+    }
+        .service-box{
+          @include grid(repeat(3,1fr));
+          column-gap: .5rem;
+          padding: 1rem 5%;
+       .box{
+           @include flexBox (center, column);
+           margin-top: 2rem;
+           padding: 1rem;
+           line-height: 2;
+           box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+           border: .1rem solid rgba(0,0,0,.2);
+           h2{
+               text-align: center;
+               font-weight: 600;
+               margin-top: 1rem;
+               color: $dark;
+           }
+           p{
+               text-align: center;
+               color: $dark;
+           }
+           img{
+               height: 100px;
+               width: 100px;
+           }
+          .btn{
+           @include button;
+           padding: 0.3rem 0.5rem;
+        }
+       }
+    }
+}
+
+
+@media (max-width:800px){
+    .services .service-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px){
+    .services .service-box {
+        grid-template-columns: 1fr;
+    }
+    .services h1::after {
+        left: 34%;
+    }
+    .services h1 {
+        font-size: 1.5rem;
+    }
+    .box h2 {
+        font-size: 1.4rem;
+    }
+}
